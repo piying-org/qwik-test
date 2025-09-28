@@ -34,6 +34,8 @@
     "release": "np",
     "start": "vite --open --mode ssr",
     "test": "echo \"No test specified\" && exit 0",
+    "test.unit": "vitest components",
+    "test.unit.ui": "vitest --ui components",
     "qwik": "qwik"
   },
   "devDependencies": {
@@ -49,6 +51,9 @@
     "typescript-eslint": "8.38.0",
     "undici": "*",
     "vite": "7.1.4",
-    "vite-tsconfig-paths": "^4.2.1"
-  }
+    "vite-tsconfig-paths": "^4.2.1",
+    "@vitest/ui": "0.34.6",
+    "vitest": "0.34.6"
+  },
+  "dependencies": {}
 }
