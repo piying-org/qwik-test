@@ -3,8 +3,10 @@ import { test, expect } from 'vitest';
 import { ExampleTest } from './example';
 
 test(`test1`, async () => {
-  const { screen, render } = await createDOM();
+  const { screen, render, userEvent } = await createDOM();
   await render(<ExampleTest flag={true} />);
+  let a = screen.querySelector('.change-btn');
+  userEvent(a, 'click');
   await new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
