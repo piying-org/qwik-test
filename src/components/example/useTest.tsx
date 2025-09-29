@@ -1,7 +1,7 @@
-import { $, useSignal, implicit$FirstArg } from '@builder.io/qwik';
+import { $, useSignal, implicit$FirstArg, useTask$ } from '@builder.io/qwik';
 
 export function useTest(fn1: () => any) {
-  let a = useSignal(0);
+  let a = useSignal('0');
   setTimeout(() => {
     a.value = fn1();
     console.log(a.value);
