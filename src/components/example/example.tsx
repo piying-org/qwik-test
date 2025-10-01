@@ -21,6 +21,7 @@ export const ExampleTest = component$((props: { flag: boolean }) => {
       <button
         class="change-btn"
         onClick$={() => {
+          // If setTimeout is commented out, it will work normally
           setTimeout(() => {
             value2.value = '8888';
           }, 0);
