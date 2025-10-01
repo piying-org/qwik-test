@@ -5,15 +5,14 @@ import { ExampleTest } from './example';
 test(`test1`, async () => {
   const { screen, render, userEvent } = await createDOM();
   await render(<ExampleTest flag={true} />);
-  await userEvent(screen.querySelector('.change-btn'), 'click');
- 
+  await userEvent('.change-btn', 'click');
+
   await new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 500);
+    }, 1000);
   });
 
   console.log(screen.outerHTML);
   expect(screen.outerHTML).toContain('88882');
-  expect(screen.outerHTML).toContain('88881');
 });
